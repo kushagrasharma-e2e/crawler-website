@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import "./styles.css";
 
 const siteUrl = "https://crawler-website.vercel.app";
@@ -53,14 +52,13 @@ export default function RootLayout({
       <body>
         {children}
 
-        <Script
+        <script
           id="crawler-paywall-detector"
           async
           src={`${apiBase}/detector.js`}
           data-site-key={siteKey}
           data-mode="observe"
           data-api-base={apiBase}
-          strategy="afterInteractive"
         />
       </body>
     </html>
