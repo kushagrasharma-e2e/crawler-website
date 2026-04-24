@@ -26,4 +26,8 @@ with `npm install` and `npm run build`.
 The site uses the hosted verification endpoint at `/v1/verify`; no
 `@crawler-paywall/server` package is required.
 
+Detector attestations are proxied through this app at `/v1/attest` by default.
+That keeps browser detector requests same-origin and avoids CORS preflight
+failures on the hosted attestation endpoint.
+
 Production URL used in metadata/sitemap: https://crawler-website.vercel.app

@@ -58,7 +58,7 @@ export default function RootLayout({
           src={`${apiBase}/detector.js`}
           data-site-key={siteKey}
           data-mode="observe"
-          data-api-base={apiBase}
+          data-api-base=""
         />
       </body>
     </html>
