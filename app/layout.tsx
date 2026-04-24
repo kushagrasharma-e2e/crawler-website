@@ -37,28 +37,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const siteKey =
-    process.env.CRAWLER_PAYWALL_SITE_KEY ||
-    process.env.NEXT_PUBLIC_CRAWLER_PAYWALL_SITE_KEY ||
-    "pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu";
-
-  const apiBase =
-    process.env.CRAWLER_PAYWALL_API_BASE ||
-    process.env.NEXT_PUBLIC_CRAWLER_PAYWALL_API_BASE ||
-    "https://crawler-paywall.vercel.app";
-
   return (
     <html lang="en">
       <body>
         {children}
 
         <script
-          id="crawler-paywall-detector"
           async
-          src={`${apiBase}/detector.js`}
-          data-site-key={siteKey}
+          src="https://crawler-paywall.vercel.app/detector.js"
+          data-site-key="pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu"
           data-mode="observe"
-          data-api-base=""
+          data-api-base="https://crawler-paywall.vercel.app"
         />
       </body>
     </html>
