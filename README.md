@@ -16,10 +16,9 @@ The site only loads the maintainer-provided script:
 ```html
 <script
   async
-  src="https://crawler-paywall.vercel.app/detector.js"
+  src="https://crawler-paywall.vercel.app/detector.js?siteKey=pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu"
   data-site-key="pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu"
-  data-mode="observe"
-  data-api-base="https://crawler-paywall.vercel.app">
+  data-mode="observe">
 </script>
 ```
 
