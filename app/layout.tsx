@@ -39,15 +39,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {children}
-
+      <head>
         <script
           async
           src="https://crawler-paywall.vercel.app/detector.js?siteKey=pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu"
           data-site-key="pk_live_JiwCYfPa2l8y0Tl7GOxqrEFJwrIbwIUu"
           data-mode="observe"
         ></script>
+      </head>
+      <body>
+        {children}
       </body>
     </html>
   );
